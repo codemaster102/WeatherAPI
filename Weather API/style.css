@@ -1,0 +1,88 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    transition: all 0.5s ease-in;
+  }
+  
+  body{
+    font-family: "Nunito", sans-serif;
+    background-image: unset;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: background 0.5s ease-out;
+  }
+  
+  .header{
+      text-align: center;
+      color: white;
+      margin-top: 1%; 
+      padding: 3%;
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+      border-radius: 4em;
+      transition: color 0.5s ease-out;
+  }
+
+  .input{
+    text-align: center;
+    margin: 100px auto;
+  }
+  
+  input[type="submit"]{
+    min-width: 25%;
+    padding: 15px 30px;
+    margin-top: 1em;
+    background: #e7e7e7;
+    border: none;
+    border-radius: 4em;
+    font-family: "Nunito", sans-serif;
+    font-weight:bold;
+    font-size: 20px;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .input input[type="text"]{
+    min-width: 50%;
+    width: auto;
+    height: auto;
+    padding: 5px 10px;
+    background: #e7e7e7;
+    border: none;
+    border-radius: 4em;
+    font-family: "Nunito", sans-serif;
+    font-weight:bold;
+    font-size: 20px;
+    outline: none;
+  }
+  
+  .card{
+    width: 50%;
+    background: #e7e7e7;
+    height: 40vh;
+    margin: 50px auto;
+    border-radius: 0.5em;
+  }
+  
+  
+  .close{
+    float: right;
+    margin-top: -2px;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+  
+  .card h1{
+    padding: 5px 0;
+    text-align: center;
+  }
+  
+  .card p{
+    text-align: center;
+    margin:40px 0;
+    font-size:20px;
+  }
