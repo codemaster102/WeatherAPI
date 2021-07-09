@@ -16,8 +16,8 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q='+input.value+'&appid=8
   var descValue = data['weather'][0]['description'];
 
   main.innerHTML = nameValue;
-  desc.innerHTML = "Desc - " + descValue;
-  temp.innerHTML = "Temp - " + (tempValue-273.5).toFixed(2) + "°C";
+  desc.innerHTML = "Desc : " + descValue;
+  temp.innerHTML = "Temp : " + (tempValue-273.5).toFixed(2) + "°C";
   input.value ="";
   
   if (descValue.includes("clear")){
@@ -25,38 +25,38 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q='+input.value+'&appid=8
     header.style.color = "lightblue";
   }
   if (descValue == "few clouds"){
-    document.body.style.backgroundImage = "url('img/few-clouds.jpg')";
+    document.body.style.backgroundImage = "url('img/few-clouds.gif')";
     header.style.color = "lightblue";
   }
   if (descValue == "scattered clouds"){
-    document.body.style.backgroundImage = "url('img/scattered-clouds.jpg')";
+    document.body.style.backgroundImage = "url('img/scattered-clouds.gif')";
     header.style.color = "blue";
   }
   if (descValue === "broken clouds"){
-    document.body.style.backgroundImage = "url('img/broken-clouds.jpg')";
+    document.body.style.backgroundImage = "url('img/broken-clouds.gif')";
     header.style.color = "blue";
   }
   if (descValue === "overcast clouds"){
-    document.body.style.backgroundImage = "url('img/overcast-clouds.jpg')";
+    document.body.style.backgroundImage = "url('img/overcast-clouds.gif')";
     header.style.color = "#9d9693";
   }
   if (descValue.includes("rain")){
-    document.body.style.backgroundImage = "url('img/rain.jpg')";
+    document.body.style.backgroundImage = "url('img/rain.gif')";
     header.style.color = "#afc3cc";
   }
   if (descValue.includes("thunderstorm")){
-    document.body.style.backgroundImage = "url('img/thunderstorm.jpg')";
+    document.body.style.backgroundImage = "url('img/thunderstorm.gif')";
     header.style.color = "#252e0c";
   }
   if (descValue.includes("snow")){
-    document.body.style.backgroundImage = "url('img/snow.jpg')";
+    document.body.style.backgroundImage = "url('img/snow.gif')";
     header.style.color = "#fffafa";
   }
-  if (descValue == "mist"){
-    document.body.style.backgroundImage = "url('img/mist.jpg')";
+  if (descValue == "mist" || descValue == "haze"){
+    document.body.style.backgroundImage = "url('img/mist.gif')";
     header.style.color = "#b4bbb4";
   }
 })
 
-.catch(err => alert("Sorry something went wrong! Try checking the city/town name"));
+.catch(err => alert("Sorry something went wrong! Try checking the city/town name for spelling errors (The city/town that you're searching for might also not be in the database)"));
 })
