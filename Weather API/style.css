@@ -2,29 +2,41 @@
     margin:0;
     padding: 0;
     box-sizing: border-box;
-    overflow: hidden;
     transition: all 0.5s ease-in;
   }
   
   body{
     font-family: "Nunito", sans-serif;
     background-image: unset;
-    height: 100vh;
+    height: 120vh;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
-    transition: background 0.5s ease-out;
+    background-size: 100% 110%;
+    -webkit-transition: background 1.5s linear;
+    -moz-transition: background 1.5s linear;
+    -o-transition: background 1.5s linear;
+    -ms-transition: background 1.5s linear;
+    transition: background 1.5s linear;
+  }
+
+  @keyframes myfirst {
+    from {opacity: 0.2;}
+    to {opacity: 1;}
+  }
+
+  body::-webkit-scrollbar {
+    display: none;
   }
   
   .header{
       text-align: center;
-      color: white;
+      color: black;
       margin-top: 1%; 
       padding: 3%;
       background-color: rgb(0,0,0); /* Fallback color */
-      background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+      background-color: rgba(0,0,0, 0.4); /* Black with opacity/see-through */
       border-radius: 4em;
-      transition: color 0.5s ease-out;
+      transition: color 0.3s ease-out;
   }
 
   .input{
@@ -63,7 +75,7 @@
   .card{
     width: 50%;
     background: #e7e7e7;
-    height: 40vh;
+    height: 30vh;
     margin: 50px auto;
     border-radius: 0.5em;
   }
@@ -85,4 +97,39 @@
     text-align: center;
     margin:40px 0;
     font-size:20px;
+  }
+
+  footer{
+    position: fixed;
+    background: #111;
+    padding: 20px 23px;
+    color: #fff;
+    text-align: center;
+    bottom:0;
+    left:0;
+    width:100%;
+  }
+
+  footer span a{
+    color: crimson;
+    text-decoration: none;
+  }
+
+  footer span a:hover{
+    text-decoration: underline;
+    color: white;
+  }
+
+  @media screen and (max-height: 800px){
+    body{
+      height: 120vh;
+      background-size: 100% 150%;
+    }
+  }
+
+  @media screen and (min-height: 719px){
+    body{
+      height: 100vh;
+      overflow: hidden;
+    }
   }
